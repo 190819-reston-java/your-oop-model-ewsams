@@ -13,9 +13,8 @@ public class AutomobileDriver {
 		F150.fillGas();
 		Mustang.fillGas();
 		Mustang.turningOnHandFreeset();
-		Mustang.makeCall(999892);
+		Mustang.makeCall(7920202);
 		MiniVan Sienna = new MiniVan();
 		Sienna.turningOnHandFreeset();
-		F150.turningOnHandFreeset();
 	}
 }

@@ -52,7 +52,6 @@ public class SportsCar extends Automobile {
 		}
 
 		public void turnOnBlueTooth() {
-			// TODO Auto-generated method stub
 			
 		}
 		

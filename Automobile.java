@@ -12,11 +12,10 @@ public abstract class Automobile implements IAutointerface {
 		private int year;
 		private String color;
 		private boolean running;
-		public static int SportsCar_population = 0 ;
+		public static int Auto_population = 0 ;
 		public int startEngine;
 		public String revEngine;
-		public int setCruiseControl; 
-		public String placeInReverse; 
+		public int setCruiseControl;  
 		public boolean engineOn = false;
 		public boolean blueTooth = false;
 		
@@ -26,6 +25,7 @@ public abstract class Automobile implements IAutointerface {
 			this.setYear(year);
 			this.setColor(color);
 			this.setRunning(running);
+			Auto_population++;
 		}
 		//overloading our constructor for the Automobile class
 		// placing default values for method calls of differing parameters 
@@ -102,10 +102,10 @@ public abstract class Automobile implements IAutointerface {
 		
 		public void makeCall(long number) {
 			if(blueTooth) {
-				System.out.println("While using bluetooth feel free to call " + number);
+				System.out.println("While using bluetooth feel free to call: " +  number);
 			} 
 				else {
-					System.out.println("Please turn bluetooth on before making calls...");
+					System.out.println("Please turn bluetooth on before making calls and driving...");
 				}
 		}
 		
