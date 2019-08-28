@@ -15,10 +15,10 @@ public abstract class Automobile implements IAutointerface {
 		public static int SportsCar_population = 0 ;
 		public int startEngine;
 		public String revEngine;
-		public String pushGasPedal;
 		public int setCruiseControl; 
 		public String placeInReverse; 
 		public boolean engineOn = false;
+		public boolean blueTooth = false;
 		
 		// constructor including all fields
 		public Automobile(String make, int year,String color, boolean running) {
@@ -87,6 +87,12 @@ public abstract class Automobile implements IAutointerface {
 			engineOn = true;
 		}
 		
+		//turning on bluetooth
+				public void turningOnHandFreeset() {
+					System.out.println(this.make +  " Bluetooth is On");
+					blueTooth = true;
+				}
+		
 		public void revEngine() {
 			if(engineOn==false ) {
 				System.out.println("Turn the engine on ....");}
@@ -94,17 +100,28 @@ public abstract class Automobile implements IAutointerface {
 			}
 		}
 		
+		public void makeCall(long number) {
+			if(blueTooth) {
+				System.out.println("While using bluetooth feel free to call " + number);
+			} 
+				else {
+					System.out.println("Please turn bluetooth on before making calls...");
+				}
+		}
+		
 		public void setCruiseControl(int speed) {
 			if(engineOn) {
 				System.out.println("What Speed would you like to set the car's cruise to?");
-				System.out.println("Setting cruise to:" + speed);
+				System.out.println("Setting cruise to: " + speed + " mph");
 				}
 				else {System.out.println("The engine is currently off");}
-			}
+				}
 		 
 		public void placeInReverse() {
 			if(engineOn) {
 				System.out.println("Come to a complete stop prior to changing gears");
+			} else {
+				System.out.println("engine is off");
 			}
 		}	
 }

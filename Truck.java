@@ -1,9 +1,9 @@
 package com.revature.ewsoop;
 
 public class Truck extends Automobile  {
-			
+	
+		private static String type = "Truck";
 		public static int truck_population = 0 ;
-
 		public Truck(String make, int year,String color, boolean running) {
 			super(make,year,color,running);
 			truck_population++;
@@ -45,10 +45,12 @@ public class Truck extends Automobile  {
 
 		}
 
-		@Override
 		public void fillGas() {
-			// this violates our write once and only once
-			System.out.println(this.getMake() + "filling with gas");
+			System.out.println(type + " filling with gas");
+		}
+
+		public void turnOnBlueTooth() {
+			
 		}
 
 }

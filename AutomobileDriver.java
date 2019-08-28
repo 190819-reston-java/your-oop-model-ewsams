@@ -8,8 +8,14 @@ public class AutomobileDriver {
 		System.out.println(Mustang);
 		Mustang.startEngine();
 		Mustang.revEngine();
-		Mustang.setCruiseControl(50);
+		Mustang.setCruiseControl(75);
 		F150.startEngine();
-		Truck.printPopulation();
+		F150.fillGas();
+		Mustang.fillGas();
+		Mustang.turningOnHandFreeset();
+		Mustang.makeCall(999892);
+		MiniVan Sienna = new MiniVan();
+		Sienna.turningOnHandFreeset();
+		F150.turningOnHandFreeset();
 	}
 }
