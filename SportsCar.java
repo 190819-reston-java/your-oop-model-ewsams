@@ -46,7 +46,6 @@ public class SportsCar extends Automobile {
 
 		}
 
-		
 		public void fillGas(String gasGrade) {
 			
 			if(gasGrade=="gradeA") {
@@ -61,10 +60,27 @@ public class SportsCar extends Automobile {
 		public void turnOnBlueTooth() {
 			
 		}
-		//overloading
+		
+		//overloading the method startEngine
 		public void startEngine() {
 			System.out.println(this.make +  " Engine is On");
 			engineOn = true;
 			System.out.println("Vroooooom.......Vrooooooom........");
 		}
+
+		@Override
+		public void fillGas() {
+			// TODO Auto-generated method stub
+			
+		}
+		
+		//method overloading
+		public void autoDrive() {
+			if(type != "Sports Car" ) {
+				System.out.println("This car does not have AutoDrive...");
+			}
+				else if(engineOn & type.equals("Sports Car")) {
+					System.out.println("Placing the Automobile into AutoDrive....Please be alert while in AutoDrive");
+				} autoPilot = true;
+			}	
 }

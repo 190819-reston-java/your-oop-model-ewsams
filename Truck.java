@@ -61,4 +61,9 @@ public class Truck extends Automobile  {
 			
 		}
 
+		public void autoDrive() {
+			// TODO Auto-generated method stub
+			
+		}
+
 }

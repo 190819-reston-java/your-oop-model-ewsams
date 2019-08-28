@@ -6,4 +6,6 @@ package com.revature.ewsoop;
 	 void setCruiseControl(int speed); 
 	 void placeInReverse(); 
 	 void turnOnBlueTooth();
+	 void fillGas();
+	 void autoDrive(); 
 	}
