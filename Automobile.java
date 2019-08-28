@@ -7,12 +7,12 @@ package com.revature.ewsoop;
 4. Overload at least one method
 5. Use at least one static field and or method
  */
-public abstract class Automobile  implements IAutointerface {
+public abstract class Automobile  implements IAutointerface, IBluetooth {
 	//private fields "variables"
 		protected String make;
-		private int year;
-		private String color;
-		private boolean running;
+		protected int year;
+		protected String color;
+		protected boolean running;
 		public static int Auto_population = 0 ;
 		public int startEngine;
 		public String revEngine;
@@ -112,6 +112,19 @@ public abstract class Automobile  implements IAutointerface {
 			}
 				else {
 					System.out.println("Please turn bluetooth on before making calls and driving...");
+				}
+		}
+		
+		public void listenToMusic(int volume) {
+			if(blueTooth & engineOn) {
+				System.out.println("While using bluetooth feel free to listen to your playlist at your volume: " +  volume);
+			} 
+			
+			else if(engineOn==false & blueTooth==true) {
+				System.out.println("Listening to music in the car but not on the road...");
+			}
+				else if(engineOn==false & blueTooth==false){
+					System.out.println("Please start the engine ...");
 				}
 		}
 		

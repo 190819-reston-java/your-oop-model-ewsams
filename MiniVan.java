@@ -1,6 +1,6 @@
 package com.revature.ewsoop;
 
-public class MiniVan extends Automobile implements IAutointerface {
+public class MiniVan extends Automobile {
 	
 	private static String type = "MiniVan";
 
