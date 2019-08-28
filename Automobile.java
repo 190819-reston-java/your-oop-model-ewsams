@@ -106,9 +106,6 @@ public abstract class Automobile implements IAutointerface {
 			if(engineOn) {
 				System.out.println("Come to a complete stop prior to changing gears");
 			}
-		}
-		
-		
+		}	
 }
 
-//this is a TEST 2
