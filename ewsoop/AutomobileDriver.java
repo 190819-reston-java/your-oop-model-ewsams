@@ -11,11 +11,10 @@ public class AutomobileDriver {
 		Mustang.setCruiseControl(75);
 		F150.startEngine();
 		F150.fillGas();
-		Mustang.fillGas();
+		Mustang.fillGas("gradeA");
 		Mustang.turningOnHandFreeset();
-		Mustang.makeCall("2827283729999827");
+		Mustang.makeCall("1234567892");
 		MiniVan Sienna = new MiniVan();
 		Sienna.turningOnHandFreeset();
-		Fleet.setFleet();
 	}
 }

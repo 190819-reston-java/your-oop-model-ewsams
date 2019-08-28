@@ -9,7 +9,7 @@ package com.revature.ewsoop;
  */
 public abstract class Automobile  implements IAutointerface {
 	//private fields "variables"
-		private String make;
+		protected String make;
 		private int year;
 		private String color;
 		private boolean running;
@@ -129,6 +129,7 @@ public abstract class Automobile  implements IAutointerface {
 			} else {
 				System.out.println("engine is off");
 			}
-		}	
+		}
+
 }
 
