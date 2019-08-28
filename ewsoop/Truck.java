@@ -1,10 +1,9 @@
 package com.revature.ewsoop;
-import java.io.Serializable;
 
-public class Truck extends Automobile implements Serializable {
-			
+public class Truck extends Automobile  {
+	
+		private static String type = "Truck";
 		public static int truck_population = 0 ;
-
 		public Truck(String make, int year,String color, boolean running) {
 			super(make,year,color,running);
 			truck_population++;
@@ -33,23 +32,25 @@ public class Truck extends Automobile implements Serializable {
 				}
 		public static void printPopulation() {
 			if(truck_population == 0) {
-				System.out.println("There is no population ");
+				System.out.println("There are no trucks available ");
 			}
 			
-			else {System.out.println("There are:" + truck_population + "Trucks");
+			else {System.out.println("There are: " + truck_population + " Trucks");
 			}
 		}
 			
-
 		@Override
 		public void park() {
 			System.out.println(this.getMake() + "placed in park mode");
 
 		}
 
-		@Override
 		public void fillGas() {
-			// this violates our write once and only once
-			System.out.println(this.getMake() + "filling with gas");
+			System.out.println(type + " filling with gas");
 		}
+
+		public void turnOnBlueTooth() {
+			
+		}
+
 }

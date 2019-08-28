@@ -1,4 +1,5 @@
 package com.revature.ewsoop;
+
 /*
 1. Come up with some domain model and implement it
 2. Use at least one Abstract Class, at least one Interface, at least two concrete classes
@@ -6,12 +7,18 @@ package com.revature.ewsoop;
 4. Overload at least one method
 5. Use at least one static field and or method
  */
-public abstract class Automobile {
+public abstract class Automobile  implements IAutointerface {
 	//private fields "variables"
 		private String make;
 		private int year;
 		private String color;
 		private boolean running;
+		public static int Auto_population = 0 ;
+		public int startEngine;
+		public String revEngine;
+		public int setCruiseControl;  
+		public boolean engineOn = false;
+		public boolean blueTooth = false;
 		
 		// constructor including all fields
 		public Automobile(String make, int year,String color, boolean running) {
@@ -19,6 +26,7 @@ public abstract class Automobile {
 			this.setYear(year);
 			this.setColor(color);
 			this.setRunning(running);
+			Auto_population++;
 		}
 		//overloading our constructor for the Automobile class
 		// placing default values for method calls of differing parameters 
@@ -74,6 +82,53 @@ public abstract class Automobile {
 		
 		public abstract void fillGas();
 		
+		//staring the engine
+		public void startEngine() {
+			System.out.println(this.make +  " Engine is On");
+			engineOn = true;
+		}
+		
+		//turning on bluetooth
+				public void turningOnHandFreeset() {
+					System.out.println(this.make +  " Bluetooth is On");
+					blueTooth = true;
+				}
+		
+		public void revEngine() {
+			if(engineOn==false ) {
+				System.out.println("Turn the engine on ....");}
+				else {System.out.println("engine sound: Vrooooom");
+			}
+		}
+		
+		public void makeCall(String number) {
+			if(blueTooth & number.length()==10) {
+				System.out.println("While using bluetooth feel free to call: " +  Long.parseLong(number));
+			} 
+			
+			else if(number.length()>10 & blueTooth==true) {
+				System.out.println("Sorry that number is not valid...");
+			}
+			
+				else {
+					System.out.println("Please turn bluetooth on before making calls and driving...");
+				}
+		}
+		
+		public void setCruiseControl(int speed) {
+			if(engineOn) {
+				System.out.println("What Speed would you like to set the car's cruise to?");
+				System.out.println("Setting cruise to: " + speed + " mph");
+				}
+				else {System.out.println("The engine is currently off");}
+				}
+		 
+		public void placeInReverse() {
+			if(engineOn) {
+				System.out.println("Come to a complete stop prior to changing gears");
+			} else {
+				System.out.println("engine is off");
+			}
+		}	
 }
 
-//this is a TEST 2
