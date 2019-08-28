@@ -73,4 +73,14 @@ public class SportsCar extends Automobile {
 			// TODO Auto-generated method stub
 			
 		}
+		
+		//method overloading
+		public void autoDrive() {
+			if(type != "Sports Car" ) {
+				System.out.println("This car does not have AutoDrive...");
+			}
+				else if(engineOn & type.equals("Sports Car")) {
+					System.out.println("Placing the Automobile into AutoDrive....Please be alert while in AutoDrive");
+				} autoPilot = true;
+			}	
 }

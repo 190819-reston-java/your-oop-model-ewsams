@@ -16,5 +16,7 @@ public class AutomobileDriver {
 		Mustang.makeCall("1234567892");
 		MiniVan Sienna = new MiniVan();
 		Sienna.turningOnHandFreeset();
+		Sienna.fillGas("gradeB");
+		Mustang.autoDrive();
 	}
 }
