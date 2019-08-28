@@ -44,12 +44,20 @@ public class Truck extends Automobile  {
 			System.out.println(this.getMake() + "placed in park mode");
 
 		}
-
-		public void fillGas() {
+		//overloading
+		public void fillGas(int cost) {
 			System.out.println(type + " filling with gas");
+			System.out.println("please pay:" + cost);
+			
 		}
 
 		public void turnOnBlueTooth() {
+			
+		}
+
+		@Override
+		public void fillGas() {
+			// TODO Auto-generated method stub
 			
 		}
 

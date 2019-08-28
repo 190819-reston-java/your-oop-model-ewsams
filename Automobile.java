@@ -1,4 +1,5 @@
 package com.revature.ewsoop;
+
 /*
 1. Come up with some domain model and implement it
 2. Use at least one Abstract Class, at least one Interface, at least two concrete classes
@@ -6,9 +7,9 @@ package com.revature.ewsoop;
 4. Overload at least one method
 5. Use at least one static field and or method
  */
-public abstract class Automobile implements IAutointerface {
+public abstract class Automobile  implements IAutointerface {
 	//private fields "variables"
-		private String make;
+		protected String make;
 		private int year;
 		private String color;
 		private boolean running;
@@ -100,10 +101,15 @@ public abstract class Automobile implements IAutointerface {
 			}
 		}
 		
-		public void makeCall(long number) {
-			if(blueTooth) {
-				System.out.println("While using bluetooth feel free to call: " +  number);
+		public void makeCall(String number) {
+			if(blueTooth & number.length()==10) {
+				System.out.println("While using bluetooth feel free to call: " +  Long.parseLong(number));
 			} 
+			
+			else if(number.length()>10 & blueTooth==true) {
+				System.out.println("Sorry that number is not valid...");
+			}
+			
 				else {
 					System.out.println("Please turn bluetooth on before making calls and driving...");
 				}

@@ -46,12 +46,31 @@ public class SportsCar extends Automobile {
 
 		}
 
-		@Override
-		public void fillGas() {
-			System.out.println(type + " filling with gas");
+		//overloading
+		public void fillGas(String gasGrade) {
+			
+			if(gasGrade=="gradeA") {
+				System.out.println("This grade is valid. Thanks for  using gradeA");
+				System.out.println(type + " filling up with gas");
+			}
+			else {
+				System.out.println("Please only use gasGrade --> gradeA");
+			}
 		}
 
 		public void turnOnBlueTooth() {
+			
+		}
+		//overloading
+		public void startEngine() {
+			System.out.println(this.make +  " Engine is On");
+			engineOn = true;
+			System.out.println("Vroooooom.......Vrooooooom........");
+		}
+
+		@Override
+		public void fillGas() {
+			// TODO Auto-generated method stub
 			
 		}
 		
