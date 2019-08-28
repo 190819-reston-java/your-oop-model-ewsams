@@ -46,7 +46,7 @@ public class SportsCar extends Automobile {
 
 		}
 
-		//overloading
+		
 		public void fillGas(String gasGrade) {
 			
 			if(gasGrade=="gradeA") {
@@ -67,11 +67,4 @@ public class SportsCar extends Automobile {
 			engineOn = true;
 			System.out.println("Vroooooom.......Vrooooooom........");
 		}
-
-		@Override
-		public void fillGas() {
-			// TODO Auto-generated method stub
-			
-		}
-		
 }
