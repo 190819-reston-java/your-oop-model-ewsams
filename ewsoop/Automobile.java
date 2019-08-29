@@ -1,5 +1,7 @@
 package com.revature.ewsoop;
 
+import java.util.ArrayList;
+
 public abstract class Automobile  implements IAutointerface, IBluetooth {
 	// fields "variables"
 		public String[] type = {"Sports Car","Truck"} ;
@@ -8,12 +10,13 @@ public abstract class Automobile  implements IAutointerface, IBluetooth {
 		protected String color;
 		protected boolean running;
 		public static int Auto_population = 0 ;
-		public int startEngine;
 		public String revEngine;
 		public int setCruiseControl;  
 		public boolean engineOn = false;
 		public boolean blueTooth = false;
 		public boolean autoPilot = false;
+		public ArrayList<Automobile> autoFleet = new ArrayList<Automobile>();
+		
 		
 		// constructor including all fields
 		public Automobile(String make, int year,String color, boolean running) {
@@ -21,15 +24,18 @@ public abstract class Automobile  implements IAutointerface, IBluetooth {
 			this.setYear(year);
 			this.setColor(color);
 			this.setRunning(running);
-			Auto_population++;
+			Auto_population++;	
 		}
 		
-		@Override
-		public String toString() {
+		public String fleetList() {
+			autoFleet.add(this.toString());
+		}
+		
+		
+		public  String toString() {
 			return "Automobile: make=" + make + ", year=" + year + ", color=" + color + ", running=" + running;
 		}
 		
-		//overriding the toString() method
 		
 		public String getMake() {
 			return make;
