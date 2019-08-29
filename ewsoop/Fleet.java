@@ -1,9 +1,10 @@
 package com.revature.ewsoop;
-import java.util.ArrayList;
 
-public class Fleet  {
-	
-	public  ArrayList<String> autoFleet = new ArrayList<String>();
+public class Fleet implements Comparable <Automobile>{
 
+	public int compareTo(Automobile o) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 
 }
