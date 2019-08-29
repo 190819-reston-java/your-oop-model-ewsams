@@ -1,6 +1,6 @@
 package com.revature.ewsoop;
 
 public interface IBluetooth {
-	void turnOnBlueTooth();
+	void turnOnBlueTooth() throws Exception;
 	void listenToMusic(int volume);
 }
