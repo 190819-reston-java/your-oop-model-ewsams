@@ -15,6 +15,4 @@ public class Fleet extends ArrayList<Automobile> {
 	public static void getFleet() {
 		
 	}
-
-
 }

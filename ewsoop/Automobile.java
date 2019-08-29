@@ -1,14 +1,8 @@
 package com.revature.ewsoop;
 
-/*
-1. Come up with some domain model and implement it
-2. Use at least one Abstract Class, at least one Interface, at least two concrete classes
-3. Override at least one method
-4. Overload at least one method
-5. Use at least one static field and or method
- */
 public abstract class Automobile  implements IAutointerface, IBluetooth {
-	//private fields "variables"
+	// fields "variables"
+		public String[] type = {"Sports Car","Truck"} ;
 		protected String make;
 		protected int year;
 		protected String color;
@@ -29,24 +23,6 @@ public abstract class Automobile  implements IAutointerface, IBluetooth {
 			this.setRunning(running);
 			Auto_population++;
 		}
-		//overloading our constructor for the Automobile class
-		// placing default values for method calls of differing parameters 
-		public Automobile(String make,int year , String color) {
-			this(make,year,color,true);	
-		}
-
-		public Automobile(String make,int year) {
-			this(make,year,"blue");	
-		}
-		
-		public Automobile(String make) {
-			this(make,0);	
-		}
-		
-		public Automobile() {
-			this("Ford");	
-		}
-		//method overriding taking place
 		
 		@Override
 		public String toString() {
@@ -154,6 +130,15 @@ public abstract class Automobile  implements IAutointerface, IBluetooth {
 			}
 		}
 		
-		public void AutoDrive() {}
-}
+		public void autoDrive() throws Exception {
+				if(engineOn & type.equals(type) & this.year > 2017) {
+					System.out.println("This car feutures AutoDrive...");
+					autoPilot = true;
+				}
+				else {
+					throw new Exception("This Automobile does not feuture autoDrive()...");
+				}
+			}	
+		}
+
 

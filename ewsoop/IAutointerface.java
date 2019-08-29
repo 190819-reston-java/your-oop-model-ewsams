@@ -5,6 +5,6 @@ package com.revature.ewsoop;
 	 void revEngine();
 	 void setCruiseControl(int speed); 
 	 void placeInReverse(); 
-	 void fillGas();
-	 void autoDrive(); 
+	 void fillGas(String gas);
+	 void autoDrive() throws Exception; 
 	}

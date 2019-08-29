@@ -5,32 +5,12 @@ public class SportsCar extends Automobile {
 		private static String type = "Sports Car";	
 		public static int SportsCar_population = 0 ;
 		public boolean keyless = false;
+		
 		public SportsCar(String make, int year,String color, boolean running) {
 			super(make,year,color,running);
 			SportsCar_population++;
 		}
 
-		//overloading our constructor for the SportsCar class
-				// placing default values for method calls of differing parameters 
-				public SportsCar(String make,int year , String color) {
-					this(make,year,color,true);	
-					SportsCar_population++;
-				}
-
-				public SportsCar(String make,int year) {
-					this(make,year,"blue");	
-					SportsCar_population++;
-				}
-				
-				public SportsCar(String make) {
-					this(make,0);	
-					SportsCar_population++;
-				}
-				
-				public SportsCar() {
-					this("Ford");
-					SportsCar_population++;
-				}
 		public static void printPopulation() {
 			if(SportsCar_population == 0) {
 				System.out.println("There is no population ");
@@ -40,16 +20,15 @@ public class SportsCar extends Automobile {
 			}
 		}
 			
-
 		@Override
 		public void park() {
 			System.out.println(this.getMake() + "placed in park mode");
 
 		}
-
-		public void fillGas(String gasGrade) {
-			
-			if(gasGrade=="gradeA") {
+		
+		// method overloading
+		public void fillGas(String gas) {
+			if(gas=="gradeA") {
 				System.out.println("This grade is valid. Thanks for  using gradeA");
 				System.out.println(type + " filling up with gas");
 			}
@@ -58,8 +37,19 @@ public class SportsCar extends Automobile {
 			}
 		}
 
-		public void turnOnBlueTooth() {
+		public void turnOnBlueTooth() throws Exception {
+			if(blueTooth) {
+				System.out.println("Google Voice is avaialable....");
+			}
 			
+			else if(blueTooth & engineOn) {
+				System.out.println("Google Voice is avaialable....");
+			}
+			
+			else {
+				throw new Exception("Please turn on Blue Tooth While Driving...");
+			}
+
 		}
 		
 		//overloading the method startEngine
@@ -78,23 +68,24 @@ public class SportsCar extends Automobile {
 			System.out.println("Vroooooom.......Vrooooooom........");	
 		}
 			catch(Exception e) {
-				System.out.println(e + "Please indicate with true or false that the automobile features a keyless start...");
+				System.out.println(e + "Please indicate with true or false that the Automobile features a keyless start...");
 			}	
 		}
 
 		@Override
 		public void fillGas() {
-			// TODO Auto-generated method stub
-			
+			System.out.println("Currently at a full Tank of Gas");
 		}
 		
 		//method overloading
-		public void autoDrive() {
-			if(type != "Sports Car" ) {
-				System.out.println("This car does not have AutoDrive...");
+		public void autoDrive() throws Exception {
+			if(type != "Sports Car" || this.running == false || this.year < 2017) {
+				System.out.println("This Automobile is not running or does not have AutoDrive...");
 			}
-				else if(engineOn & type.equals("Sports Car")) {
+			else if(engineOn & type.equals("Sports Car") & this.year > 2017) {
 					System.out.println("Placing the Automobile into AutoDrive....Please be alert while in AutoDrive");
-				} autoPilot = true;
-			}	
+				 	autoPilot = true;}
+			else { throw new Exception("This Automobile does not feuture autoDrive.....");
+			}
+	}	
 }

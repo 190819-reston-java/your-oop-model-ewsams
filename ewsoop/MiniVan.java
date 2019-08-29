@@ -8,22 +8,7 @@ public class MiniVan extends Automobile {
 		super(make, year, color, running);
 	}
 
-	public MiniVan(String make, int year, String color) {
-		super(make, year, color);
-	}
-
-	public MiniVan(String make, int year) {
-		super(make, year);
-	}
-
-	public MiniVan(String make) {
-		super(make);
-	}
-
-	public MiniVan() {
-	}
-
-	public void turnOnBlueTooth() {
+	public void turnOnBlueTooth() throws Exception {
 		if(blueTooth) {
 			System.out.println("Google Voice is avaialable....");
 		}
@@ -33,16 +18,15 @@ public class MiniVan extends Automobile {
 		}
 		
 		else {
-			System.out.println("Please turn on Blue Tooth While Driving...");
+			throw new Exception("Please turn on Blue Tooth While Driving...");
 		}
-
 	}
 
 	@Override
 	public void park() {
 		System.out.println("Please make sure there are no children nearby while parking....");
 		if(blueTooth) {
-			System.out.println("please get off the phone...");
+			System.out.println("please get turn off the phone...");
 		}
 
 	}
@@ -58,18 +42,18 @@ public class MiniVan extends Automobile {
 		}
 	} catch(Exception e) {
 		System.out.println(e + "please include --> classB gasoline only");
+		}
 	}
-}
+
+
+	public void autoDrive() {
+		System.out.println("Mini Vans do not offer autoDrive()....");
+		
+	}
 
 	@Override
 	public void fillGas() {
-		// TODO Auto-generated method stub
+		System.out.println("Currently at a full Tank of Gas");
 		
 	}
-
-	public void autoDrive() {
-		// TODO Auto-generated method stub
-		
-	}
-
 }
