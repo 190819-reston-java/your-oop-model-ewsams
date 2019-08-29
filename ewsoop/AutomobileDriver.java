@@ -6,7 +6,7 @@ public class AutomobileDriver {
 		SportsCar Mustang = new SportsCar();
 		Truck F150 = new Truck();
 		System.out.println(Mustang);
-		Mustang.startEngine();
+		Mustang.startEngine(true);
 		Mustang.revEngine();
 		Mustang.setCruiseControl(75);
 		F150.startEngine();

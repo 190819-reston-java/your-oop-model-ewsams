@@ -7,12 +7,12 @@ package com.revature.ewsoop;
 4. Overload at least one method
 5. Use at least one static field and or method
  */
-public abstract class Automobile  implements IAutointerface {
+public abstract class Automobile  implements IAutointerface, IBluetooth {
 	//private fields "variables"
 		protected String make;
-		private int year;
-		private String color;
-		private boolean running;
+		protected int year;
+		protected String color;
+		protected boolean running;
 		public static int Auto_population = 0 ;
 		public int startEngine;
 		public String revEngine;
@@ -103,6 +103,7 @@ public abstract class Automobile  implements IAutointerface {
 		}
 		
 		public void makeCall(String number) {
+			try {
 			if(blueTooth & number.length()==10) {
 				System.out.println("While using bluetooth feel free to call: " +  Long.parseLong(number));
 			} 
@@ -113,16 +114,37 @@ public abstract class Automobile  implements IAutointerface {
 				else {
 					System.out.println("Please turn bluetooth on before making calls and driving...");
 				}
+			}catch(Exception e) {
+				System.out.println(e + "Please use a valid number");
+			}
+		}
+		
+		public void listenToMusic(int volume) {
+			if(blueTooth & engineOn) {
+				System.out.println("While using bluetooth feel free to listen to your playlist at your volume: " +  volume);
+			} 
+			
+			else if(engineOn==false & blueTooth==true) {
+				System.out.println("Listening to music in the car but not on the road...");
+			}
+				else if(engineOn==false & blueTooth==false){
+					System.out.println("Please start the engine ...");
+				}
 		}
 		
 		public void setCruiseControl(int speed) {
+			try {
 			if(engineOn) {
 				System.out.println("What Speed would you like to set the car's cruise to?");
 				System.out.println("Setting cruise to: " + speed + " mph");
 				}
-				else {System.out.println("The engine is currently off");}
+				else {System.out.println("The engine is currently off");
 				}
-		 
+			} catch(Exception e) {
+					System.out.println("Please insert a valid speed....");
+			}
+		}
+		
 		public void placeInReverse() {
 			if(engineOn) {
 				System.out.println("Come to a complete stop prior to changing gears");
