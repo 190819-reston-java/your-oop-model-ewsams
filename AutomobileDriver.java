@@ -1,10 +1,6 @@
 package com.revature.ewsoop;
 
-import java.util.ArrayList;
-
 public class AutomobileDriver  {
-	
-	static ArrayList<String>autoFleet = new ArrayList<String>();
 
 	public static void main(String[] args) throws Exception {
 		SportsCar Mustang = new SportsCar("Ford", 2019, "red", true);
