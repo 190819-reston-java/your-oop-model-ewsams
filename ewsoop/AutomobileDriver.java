@@ -1,6 +1,6 @@
 package com.revature.ewsoop;
 
-public class AutomobileDriver {
+public class AutomobileDriver extends Automobile {
 
 	public static void main(String[] args) throws Exception {
 		SportsCar Mustang = new SportsCar("Ford", 2019, "red", true);
