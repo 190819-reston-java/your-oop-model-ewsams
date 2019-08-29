@@ -103,6 +103,7 @@ public abstract class Automobile  implements IAutointerface, IBluetooth {
 		}
 		
 		public void makeCall(String number) {
+			try {
 			if(blueTooth & number.length()==10) {
 				System.out.println("While using bluetooth feel free to call: " +  Long.parseLong(number));
 			} 
@@ -113,6 +114,9 @@ public abstract class Automobile  implements IAutointerface, IBluetooth {
 				else {
 					System.out.println("Please turn bluetooth on before making calls and driving...");
 				}
+			}catch(Exception e) {
+				System.out.println(e + "Please use a valid number");
+			}
 		}
 		
 		public void listenToMusic(int volume) {
@@ -129,13 +133,18 @@ public abstract class Automobile  implements IAutointerface, IBluetooth {
 		}
 		
 		public void setCruiseControl(int speed) {
+			try {
 			if(engineOn) {
 				System.out.println("What Speed would you like to set the car's cruise to?");
 				System.out.println("Setting cruise to: " + speed + " mph");
 				}
-				else {System.out.println("The engine is currently off");}
+				else {System.out.println("The engine is currently off");
 				}
-		 
+			} catch(Exception e) {
+					System.out.println("Please insert a valid speed....");
+			}
+		}
+		
 		public void placeInReverse() {
 			if(engineOn) {
 				System.out.println("Come to a complete stop prior to changing gears");

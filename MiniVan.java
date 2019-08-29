@@ -26,7 +26,13 @@ public class MiniVan extends Automobile {
 	public void turnOnBlueTooth() {
 		if(blueTooth) {
 			System.out.println("Google Voice is avaialable....");
-		}else {
+		}
+		
+		else if(blueTooth & engineOn) {
+			System.out.println("Google Voice is avaialable....");
+		}
+		
+		else {
 			System.out.println("Please turn on Blue Tooth While Driving...");
 		}
 
@@ -41,17 +47,19 @@ public class MiniVan extends Automobile {
 
 	}
 
-	public void fillGas(String args) {
-		if(args=="gradeB") {
-			System.out.println("This grade is valid. Thanks for  using gradeB");
+	public void fillGas(String gas) {
+		try {
+		if(gas=="gradeB") {
+			System.out.println("This grade is valid. Thanks for using gradeB");
 			System.out.println(type + " filling up with gas");
 		}
 		else {
 			System.out.println("Please only use gasGrade --> gradeB");
 		}
-		
-
+	} catch(Exception e) {
+		System.out.println(e + "please include --> classB gasoline only");
 	}
+}
 
 	@Override
 	public void fillGas() {
