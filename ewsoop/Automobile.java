@@ -1,9 +1,8 @@
 package com.revature.ewsoop;
-
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Automobile  implements IAutointerface, IBluetooth {
+	public abstract class Automobile  implements IAutointerface, IBluetooth {
 	
 	public static List<Automobile> autoList = new ArrayList<Automobile>();
 	// fields "variables"
