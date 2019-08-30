@@ -5,7 +5,6 @@ import java.util.List;
 
 	public abstract class Automobile  implements IAutointerface, IBluetooth {
 	
-	public static List<Automobile> autoList = new ArrayList<Automobile>();
 	// fields "variables"
 		public String[] type = {"Sports Car","Truck"} ;
 		protected String make;
@@ -18,6 +17,7 @@ import java.util.List;
 		public boolean engineOn = false;
 		public boolean blueTooth = false;
 		public boolean autoPilot = false;
+		public static List<Automobile> autoList = new ArrayList<Automobile>();
 		
 		// constructor including all fields
 		public Automobile(String make, int year,String color, boolean running) {
