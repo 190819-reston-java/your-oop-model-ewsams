@@ -15,13 +15,10 @@ public class AutomobileDriver  {
 		Truck F350 = new Truck("Ford",2018,"black",true);
 		//methods used:
 		Mustang.startEngine(true);
-		Mustang.revEngine();
 		Mustang.setCruiseControl(75);
 		Mustang.fillGas("gradeA");
 		Mustang.turningOnHandFreeset();
 		Mustang.makeCall("1234567892");
-		F150.startEngine();
-		F150.fillGas();
 		Sienna.turningOnHandFreeset();
 		Sienna.fillGas("gradeB");
 		Mustang.autoDrive();
