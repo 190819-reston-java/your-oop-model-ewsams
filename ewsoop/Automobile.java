@@ -38,8 +38,8 @@ import java.util.List;
 		public void setMake(String make) {
 			this.make = make;
 		}
-		public int getYear() {
-			return year;
+		public  int getYear() {
+			return  this.year;
 		}
 		public void setYear(int year) {
 			this.year = year;
