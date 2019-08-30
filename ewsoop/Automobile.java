@@ -1,5 +1,6 @@
 package com.revature.ewsoop;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 	public abstract class Automobile  implements IAutointerface, IBluetooth {
@@ -130,7 +131,7 @@ import java.util.List;
 				System.out.println("engine is off");
 			}
 		}
-		
+		// an example of throwing an exception
 		public void autoDrive() throws Exception {
 				if(engineOn & type.equals(type) & this.year > 2017) {
 					System.out.println("This car feutures AutoDrive...");
@@ -139,7 +140,22 @@ import java.util.List;
 				else {
 					throw new Exception("This Automobile does not feuture autoDrive()...");
 				}
-			}	
+			}
+		// *****************************************************************************************************************//////
+		// A small portion of this Comparator's functionality was borrowed from "https://dzone.com/articles/sorting-java-arraylist"
+		// this section in particular................
+		// return (o2.getYear() < o1.getYear() ? -1 :                     
+		//     (o2.getYear() == o1.getYear() ? 0 : 1));
+		// ****************************************************************************************************************///////
+		public static Comparator<Automobile> yearComparator = new Comparator<Automobile>() {         
+		    public int compare(Automobile o1, Automobile o2) {             
+		      return (o2.getYear() < o1.getYear() ? -1 :                     
+		              (o2.getYear() == o1.getYear() ? 0 : 1));   
+		    }     
+		  };       
+			
 		}
+
+		
 
 
