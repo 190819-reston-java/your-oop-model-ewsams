@@ -141,12 +141,18 @@ import java.util.List;
 					throw new Exception("This Automobile does not feuture autoDrive()...");
 				}
 			}
-		// *****************************************************************************************************************//////
-		// A small portion of this Comparator's functionality was borrowed from "https://dzone.com/articles/sorting-java-arraylist"
-		// this section in particular................
-		// return (o2.getYear() < o1.getYear() ? -1 :                     
-		//     (o2.getYear() == o1.getYear() ? 0 : 1));
-		// ****************************************************************************************************************///////
+		/*
+		A small portion of this Comparator's functionality was borrowed 
+		from:  "https://dzone.com/articles/sorting-java-arraylist"
+		this section in particular................
+		return (o2.getYear() < o1.getYear() ? -1 :                     
+		(o2.getYear() == o1.getYear() ? 0 : 1));
+		****************************************
+		A ternary operator i.e. ( ? 1:2)  is similar to an if statement. 
+		This functionality allows the programmer to check a condition that 
+		evaluates to either true or false. The ( ? 1:2) portion returns a 
+		value if the condition evaluates to true or false......
+		*/
 		public static Comparator<Automobile> yearComparator = new Comparator<Automobile>() {         
 		    public int compare(Automobile o1, Automobile o2) {             
 		      return (o2.getYear() < o1.getYear() ? -1 :                     
