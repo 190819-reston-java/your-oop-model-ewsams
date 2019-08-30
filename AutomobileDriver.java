@@ -15,14 +15,18 @@ public class AutomobileDriver  {
 		Truck F350 = new Truck("Ford",2018,"black",true);
 		//methods used:
 		Mustang.startEngine(true);
-		Mustang.setCruiseControl(75);
-		Mustang.fillGas("gradeA");
 		Mustang.turningOnHandFreeset();
-		Mustang.makeCall("1234567892");
-		Sienna.turningOnHandFreeset();
-		Sienna.fillGas("gradeB");
-		Mustang.autoDrive();
-		F350.startEngine();
+//		Mustang.turningOnHandFreeset();
+//		Mustang.turnOnBlueTooth();
+//		Mustang.setCruiseControl(75);
+//		Mustang.fillGas("gradeA");
+//		Mustang.turningOnHandFreeset();
+//		Mustang.makeCall("1234567892");
+//		Sienna.turningOnHandFreeset();
+//		Sienna.fillGas("gradeB");
+//		Mustang.autoDrive();
+//		F350.startEngine();
+		
 		System.out.println("************************************************************************************");
 		System.out.println("-----------------Now Lets take a look at our unsorted Array List------------------");
 		for(Automobile objectInAutomobileList: Automobile.autoList) {
