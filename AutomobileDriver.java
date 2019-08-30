@@ -17,11 +17,11 @@ public class AutomobileDriver  {
 		Mustang.startEngine(true);
 		Mustang.revEngine();
 		Mustang.setCruiseControl(75);
-		F150.startEngine();
-		F150.fillGas();
 		Mustang.fillGas("gradeA");
 		Mustang.turningOnHandFreeset();
 		Mustang.makeCall("1234567892");
+		F150.startEngine();
+		F150.fillGas();
 		Sienna.turningOnHandFreeset();
 		Sienna.fillGas("gradeB");
 		Mustang.autoDrive();
