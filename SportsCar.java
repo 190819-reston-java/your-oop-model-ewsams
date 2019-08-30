@@ -3,21 +3,10 @@ package com.revature.ewsoop;
 public class SportsCar extends Automobile {
 	
 		private static String type = "Sports Car";	
-		public static int SportsCar_population = 0 ;
 		public boolean keyless = false;
 		
 		public SportsCar(String make, int year,String color, boolean running) {
 			super(make,year,color,running);
-			SportsCar_population++;
-		}
-
-		public static void printPopulation() {
-			if(SportsCar_population == 0) {
-				System.out.println("There is no population ");
-			}
-			
-			else {System.out.println("There are: " + SportsCar_population + " SportsCars");
-			}
 		}
 			
 		@Override
